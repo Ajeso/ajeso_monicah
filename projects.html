@@ -8,7 +8,8 @@
     <link href="/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Roboto:wght@100;300;400&display=swap"
         rel="stylesheet">
 </head>
 
@@ -28,14 +29,14 @@
                 technical skills and gain practical experience. Some notable projects include:</p>
             <div class="container flex lg:flex-row flex-wrap gap-4 pt-4 text-black ">
 
-                <div class="card border p-2  bg-nude text-center lg:p-8   lg:w-5/12">
+                <div class="card border p-2  bg-nude text-center lg:p-8  h-auto  lg:w-5/12">
                     <a class="project-thumbnail cursor-pointer " data-project="project-1"
                         href="https://web-app-dashboard-red.vercel.app/" target="_blank">
                         <img src="images/dashboard.webp" alt=" dashboard"> </a>
                 </div>
 
 
-                <div class=" card border p-2  bg-nude text-center lg:p-8 lg:w-5/12 ">
+                <div class=" card border p-2  bg-nude text-center  lg:p-8 lg:w-5/12 ">
                     <a class="project-thumbnail cursor-pointer" data-project="project-2"
                         href="https://employee-directory-gamma.vercel.app/" target="_blank">
                         <img src="/images/employee-directory.webp" alt="employee-directory"> </a>
@@ -100,9 +101,9 @@
 
 
 
-        <section class="modal hidden absolute z-50  w-full h-full  top-0 left-0" id="project-modal">
+        <section class="modal hidden fixed z-50  w-full h-full  top-0 left-0 pointer-events-none" id="project-modal">
             <div
-                class="modal-content  text-black absolute  pointer-events-none w-60  p-5  left-2/4 top-2/4 -translate-y-1/2 -translate-x-1/2">
+                class="modal-content  text-black absolute  pointer-events-auto  w-4/5  p-5  max-w-[500px]  -translate-y-1/2 -translate-x-1/2">
                 <span class="close-button absolute top-3 left-3 cursor-pointer text-xl" id="close-modal">&times;</span>
                 <div id="project-1-details" class="project-details border p-4  bg-nude text-center">
                     <a href="https://web-app-dashboard-red.vercel.app/" target="_blank">
