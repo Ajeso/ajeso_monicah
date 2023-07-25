@@ -14,7 +14,7 @@
 
 <body class="box-border ">
 
-    <main class="p-4 font-Montserrat font-extralight bg-zinc-900 text-white  md:grid md:grid-cols-3">
+    <main class="p-4 font-Montserrat font-extralight bg-zinc-900 text-white  md:grid ">
         <nav
             class="flex justify-around items-center text-xs md:flex-col md:col-start-1 md:col-end-2  md:h-screen md:w-20 md:fixed font-medium">
             <a class="md:transform md:-rotate-90" href="/home.html">HOME</a>
@@ -22,19 +22,19 @@
             <p class="md:transform md:-rotate-90"> &copy; / 2023</p>
         </nav>
 
-        <section class="pt-4  md:col-start-2 md:-col-end-4 md:mt-14 md:w-96 md:-ml-10 font-light lg:w-[70vw]">
+        <section class="pt-4  md:col-start-2 md:-col-end-4  md:w-96  font-light lg:w-[70vw]">
             <h2 class="py-4">PROJECTS</h2>
             <p>This is a showcase of the projects I have done from treeHouse and other personal projects</p>
-            <div class="container flex flex-col lg:flex-row wrap pt-4 text-black gap-y-5 ">
+            <div class="container flex lg:flex-row flex-wrap gap-4 pt-4 text-black ">
 
-                <div class="card border p-2  bg-nude text-center lg:p-8 lg:w-2/4  ">
-                    <a class="project-thumbnail cursor-pointer" data-project="project-1"
+                <div class="card border p-2  bg-nude text-center lg:p-8   lg:w-5/12">
+                    <a class="project-thumbnail cursor-pointer " data-project="project-1"
                         href="https://web-app-dashboard-red.vercel.app/" target="_blank">
                         <img src="images/dashboard.webp" alt=" dashboard"> </a>
                 </div>
 
 
-                <div class="card card border p-2  bg-nude text-center lg:p-8 lg:w-2/4">
+                <div class=" card border p-2  bg-nude text-center lg:p-8 lg:w-5/12 ">
                     <a class="project-thumbnail cursor-pointer" data-project="project-2"
                         href="https://employee-directory-gamma.vercel.app/" target="_blank">
                         <img src="/images/employee-directory.webp" alt="employee-directory"> </a>
@@ -44,7 +44,7 @@
 
 
 
-                <div class="card card border p-2  bg-nude text-center lg:p-8  lg:w-2/4">
+                <div class="card  border p-2  bg-nude text-center lg:p-8  lg:w-5/12">
                     <a class="project-thumbnail cursor-pointer" data-project="project-3"
                         href="https://game-show-app-olive.vercel.app/" target="_blank">
                         <img src="/images/game-show.webp" alt="game-show"> </a>
@@ -53,7 +53,7 @@
 
 
 
-                <div class="card card border p-2  bg-nude text-center lg:p-8 lg:w-2/4">
+                <div class="card border p-2  bg-nude text-center lg:p-8 lg:w-5/12">
                     <a class="project-thumbnail cursor-pointer" data-project="project-4"
                         href="https://news-home-page.vercel.app/" target="_blank">
                         <img src="/images/news-home-page.webp" alt="news-home-page"> </a>
@@ -62,7 +62,7 @@
 
 
 
-                <div class="card card border p-2  bg-nude text-center lg:p-8 lg:w-2/4">
+                <div class="card  border p-2  bg-nude text-center lg:p-8 lg:w-5/12">
 
                     <a class="project-thumbnail cursor-pointer" data-project="project-5"
                         href="https://photo-gallery-vert.vercel.app/" target="_blank"> <img
@@ -70,7 +70,7 @@
                 </div>
 
 
-                <div class="card card border p-2  bg-nude text-center lg:p-8 lg:w-2/4">
+                <div class=" card border p-2  bg-nude text-center lg:p-8 lg:w-5/12">
 
                     <a class="project-thumbnail cursor-pointer" data-project="project-6"
                         href="https://registration-form-woad.vercel.app/" target="_blank">
@@ -79,7 +79,7 @@
 
 
 
-                <div class="card card border p-2  bg-nude text-center lg:p-8 lg:w-2/4">
+                <div class=" card border p-2  bg-nude text-center lg:p-8 lg:w-5/12">
                     <a class="project-thumbnail cursor-pointer" data-project="project-7"
                         href="https://responsive-layout-gold.vercel.app/" target="_blank">
                         <img src="/images/responsive-layout.png" alt="responsive-layout"></a>
@@ -87,7 +87,7 @@
                 </div>
 
 
-                <div class="card card border p-2  bg-nude text-center lg:p-8 lg:w-2/4">
+                <div class=" card border p-2  bg-nude text-center lg:p-8 lg:w-5/12">
                     <a class="project-thumbnail cursor-pointer" data-project="project-8" href="https://ajeso.dev"
                         target="_blank">
                         <img src="images/personal-card.webp" alt="personal-card"></a>
@@ -99,14 +99,12 @@
 
 
 
-        <section class="lightbox-container hidden justify-center fixed z-50 items-center top-0 left-0 w-full h-full"
-            id="project-lightbox">
-            <div class="lightbox-content  text-black absolute  top-2/4 w-52 p-5 -translate-y-2/4 -translate-x-2/4">
-                <span class="close-button absolute top-3 left-3 cursor-pointer text-xl"
-                    id="close-lightbox">&times;</span>
-                <div id="project-1-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8   hidden relative m-auto max-w-[80%] max-h-w[80%] ">
-                    <a class=" text-center" href="https://web-app-dashboard-red.vercel.app/" target="_blank">
+        <section class="modal hidden absolute z-50  w-full h-full  top-0 left-0" id="project-modal">
+            <div
+                class="modal-content  text-black absolute  pointer-events-none w-60  p-5  left-2/4 top-2/4 -translate-y-1/2 -translate-x-1/2">
+                <span class="close-button absolute top-3 left-3 cursor-pointer text-xl" id="close-modal">&times;</span>
+                <div id="project-1-details" class="project-details border p-4  bg-nude text-center">
+                    <a class=" project-thumbnail" href="https://web-app-dashboard-red.vercel.app/" target="_blank">
                         <img src="images/dashboard.webp" alt=" dashboard"> </a>
 
                     <h2 class="font-medium">Dashboard</h2>
@@ -115,32 +113,34 @@
                 </div>
 
 
-                <div id="project-2-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8 lg:w-2/4 hidden relative m-auto max-w-[80%] max-h-[80%]">
-                    <a class=" project-link " href="https://employee-directory-gamma.vercel.app/" target="_blank">
+                <div id="project-2-details" class="project-details border p-4  bg-nude text-center top-0 left-0">
+                    <a class=" project-thumbnail" href="https://employee-directory-gamma.vercel.app/" target="_blank">
                         <img src="/images/employee-directory.webp" alt="employee-directory"> </a>
 
                     <h2 class="font-medium">EmployeeDirectory</h2>
-                    <p>
+                    <p>In this project, I used the Random User Generator API to grab information for 12 random
+                        employees, and use that data to build a prototype for an Awesome Startup employee directory.
                     </p>
                 </div>
 
-                <div id="project-3-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8  lg:w-2/4 hidden relative m-auto max-w-[80%] max-h-w[80%]">
+                <div id="project-3-details" class="project-details border p-2  bg-nude text-center  ">
 
-                    <a href="https://game-show-app-olive.vercel.app/" target="_blank">
+                    <a class=" project-thumbnail" href="https://game-show-app-olive.vercel.app/" target="_blank">
                         <img src="/images/game-show.webp" alt="game-show"> </a>
                     <h2 class="font-medium">Game Show</h2>
-                    <p>Interactive dashboard, this project involved creating charts,
-                        SVGS. I used chart.js, Sass.and JavaScript.
+                    <p>This is a word-guessing game where players will click letters from an onscreen keyboard to try to
+                        guess a random phrase.Used Javascript to create an array of phrases and write functions to
+                        choose a random phrase from that array, split the phrase into letters, and put those letters
+                        onto the game board.
                     </p>
                 </div>
 
 
 
-                <div id="project-4-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8 lg:w-2/4 hidden relative m-auto max-w-[80%] max-h-w[80%]">
-
+                <div id="project-4-details" class="project-details border p-2  bg-nude text-center ">
+                    <a class="project-thumbnail" data-project="project-4" href="https://news-home-page.vercel.app/"
+                        target="_blank">
+                        <img src="/images/news-home-page.webp" alt="news-home-page"> </a>
 
                     <h2 class="font-medium">News Homepage</h2>
                     <p>Interactive dashboard, this project involved creating charts,
@@ -151,29 +151,28 @@
 
 
 
-                <div id="project-5-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8 lg:w-2/4 hidden relative m-auto max-w-[80%] max-h-w[80%]">
+                <div id="project-5-details" class="project-details border p-2  bg-nude text-center">
 
-                    <a href="https://photo-gallery-vert.vercel.app/" target="_blank"> <img
+                    <a class=" project-thumbnail" href="https://photo-gallery-vert.vercel.app/" target="_blank"> <img
                             src="/images/photo-gallery.webp" alt=" photo-gallery"> </a>
 
                     <h2 class="font-medium">Photo Gallery</h2>
-                    <p>Interactive dashboard, this project involved creating charts,
-                        SVGS. I used chart.js, Sass.and JavaScript.
+                    <p> Interactive photo gallery using JavaScript and CSS Grid Layout.At the top of the page, a search
+                        area where photos will hide and show depending on user input. When the user clicks on a
+                        thumbnail, the photo will display in a lightbox.
                     </p>
 
                 </div>
 
 
-                <div id="project-6-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8 lg:w-2/4 hidden relative m-auto max-w-[80%] max-h-w[80%]">
+                <div id="project-6-details" class="project-details border p-2  bg-nude text-center ">
 
-                    <a href="https://registration-form-woad.vercel.app/" target="_blank"> <img
-                            src="/images/registration-form.webp" alt="registration-form"> </a>
+                    <a class=" project-thumbnail" href="https://registration-form-woad.vercel.app/" target="_blank">
+                        <img src="/images/registration-form.webp" alt="registration-form"> </a>
 
                     <h2 class="font-medium">Registration Form</h2>
-                    <p>Interactive dashboard, this project involved creating charts,
-                        SVGS. I used chart.js, Sass.and JavaScript.
+                    <p>A responsive, mobile-friendly registration form using a wide variety of HTML form input types and
+                        attributes.
                     </p>
 
 
@@ -181,34 +180,24 @@
 
 
 
-                <div id="project-7-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8 lg:w-2/4 hidden relative m-auto max-w-[80%] max-h-w[80%]">
+                <div id="project-7-details" class="project-details border p-2  bg-nude text-center ">
 
-                    <a href="https://responsive-layout-gold.vercel.app/" target="_blank"> <img
-                            src="/images/responsive-layout.png" alt="responsive-layout"></a>
-
-
+                    <a class=" project-thumbnail" href="https://responsive-layout-gold.vercel.app/" target="_blank">
+                        <img src="/images/responsive-layout.png" alt="responsive-layout"></a>
                     <h2 class="font-medium">Responsive Layout</h2>
                     <p>Interactive dashboard, this project involved creating charts,
                         SVGS. I used chart.js, Sass.and JavaScript.
                     </p>
-
-
                 </div>
 
 
-                <div id="project-8-details"
-                    class="project-details border p-2  bg-nude text-center lg:p-8 lg:w-2/4 hidden relative m-auto max-w-[80%] max-h-w[80%]">
+                <div id="project-8-details" class="project-details border p-2  bg-nude text-center w-">
 
-                    <a href="https://ajeso.dev" target="_blank">
+                    <a class=" project-thumbnail" href="https://ajeso.dev" target="_blank">
                         <img src="images/personal-card.webp" alt="personal-card"></a>
-
-
                     <h2 class="font-medium">Personal Card</h2>
                     <p>This is a personal card I created ith Astro and Tailwind.
                     </p>
-
-
                 </div>
 
 
