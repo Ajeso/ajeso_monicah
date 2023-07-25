@@ -30,7 +30,3 @@ projectThumbnails.forEach((thumbnail) => {
     hideModal();
   });
 });
-
-closeModal.addEventListener("click", () => {
-  hideModal();
-});
